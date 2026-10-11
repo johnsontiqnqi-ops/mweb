@@ -64,3 +64,7 @@ The intro uses PixelSwap's lightweight SVG clipping mode: one shared incoming la
 Mattress scenes are loaded through DeferredMattressScene after the intro and when near the viewport. The hero uses the local video and combo-hero-poster.webp; live 3D is the fallback when the video fails or reduced motion is requested. The wave canvas is capped at 900,000 rendering pixels, with a stable 30 fps animation budget.
 
 Local performance checks: node scripts/profile-entry.mjs <label> and node scripts/verify-entry.mjs (Edge/Playwright paths match this workstation). Profile JSON and preview screenshots are saved in Y:/mweb.
+
+### Online deployment
+
+The site is registered with Sites. Its permanent identity and SPA fallback are tracked in `.openai/hosting.json`. Reuse this project ID for future releases; keep editing the canonical `Y:/mweb` checkout. Deployment archives are generated under `.deploy/` and excluded from Git. The GitHub origin remains unchanged.
