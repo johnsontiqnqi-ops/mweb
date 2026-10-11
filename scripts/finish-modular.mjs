@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';
+let source=await fs.readFile('src/main.jsx','utf8');
+if(!source.includes("import './modular.css';"))source=source.replace("import './styles.css';","import './styles.css';\nimport './modular.css';");
+source=source.replace('navigate(`/products/${current.id}`);','navigate(`/products/${current.id}`,{preserveConfiguration:true});');
+source=source.replace('<button className={exploded?', '<button disabled={current.type===\'extension\'&&!extension} className={exploded?');
+source=source.replace('<button aria-pressed={exploded}', '<button disabled={product.type===\'extension\'&&!extension} aria-pressed={exploded}');
+await fs.writeFile('src/main.jsx',source);
+await fs.writeFile('scripts/check-preview.mjs',"// Compatibility entry point for the current product checks.\nimport './verify-modular.mjs';\n");
+await fs.writeFile('src/content.js',"// Kept as a compatibility entry point. Edit confirmed product data in productContent.js.\nexport * from './productContent';\n");
+await fs.writeFile('src/MattressScene.jsx',"// The original concept model has been replaced by the modular mattress model.\nexport { default } from './ModularScene';\n");
+console.log('Modular styles and compatibility entries ready.');

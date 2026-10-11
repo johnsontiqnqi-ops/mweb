@@ -1,0 +1,126 @@
+/* ARHAT ocean palette — blue horizon, mint waves, white highlights. */
+:root{--muted:#a9bfd9;--line:rgba(171,212,248,.19);--accent:#9fffe3;--surface:#0b2449;color:#edf5ff;background:#07172f}
+body{background:#07172f;color:#edf5ff}
+.site-wave-backdrop{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at 78% 30%,#1b4b8f 0,#0b2854 42%,#07172f 100%)}
+.site-wave-backdrop .gradient-waves-container{position:absolute;inset:0}
+.wave-legibility-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,18,42,.68),rgba(5,24,54,.28) 65%,rgba(6,22,45,.12)),linear-gradient(180deg,rgba(4,19,43,.24),transparent 40%,rgba(4,17,40,.38))}
+.site-content{position:relative;z-index:1}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline-color:#9fffe3}
+h2 span{color:#97bee8}
+.eyebrow{color:#b4d3ef}
+.site-header{border-color:var(--line);background:linear-gradient(180deg,rgba(5,22,48,.45),transparent)}
+.site-header nav a{color:#bbcee5}.site-header nav a:hover{color:#fff}
+.site-header nav .nav-shop{color:#a6ffe5}
+.wordmark{color:#eef8ff}
+.nav-contact{border-color:#8ac0e278;color:#e8f5ff}
+.nav-contact:hover{background:#a6ffe5;color:#09254a}
+.hero{background:transparent}
+.hero:after{background:linear-gradient(180deg,transparent 65%,rgba(6,22,47,.55) 100%)}
+.hero-light{background:linear-gradient(90deg,transparent,rgba(99,162,255,.045),rgba(147,255,228,.06),transparent)}
+.hero h1 span{color:#d7eaff}
+.hero-copy>p{color:#b8cfe7}
+.tiny-line{background:#9fffe3}
+.button.light{background:#b5f8e7;border-color:#b5f8e7;color:#0a294b}
+.button.light:hover{background:#dcfff5;border-color:#dcfff5}
+.orbit-ring{border-color:#9fe9f526;box-shadow:0 0 90px #66caff0a}
+.product-marker{color:#d0f6f1}.product-marker small{color:#a1bfd8}
+.marker-dot{background:#adffe7;box-shadow:0 0 0 5px #9fffe320}
+.hero-vertical{color:#9dbfdb}
+.circle-down{border-color:#97bce270}
+.hero-index span{color:#91aed0}
+.hero-footnote{color:#a6c4e0}
+.principles{color:#afc8df}.principle-symbol{color:#a6ffe5}
+.section-heading .eyebrow{color:#a4cbea}
+.product-tabs button{color:#93b4d5}.product-tabs button span{color:#789fc5}
+.product-tabs button.active{color:#e1fff4}.product-tabs button.active:after{background:#9fffe3}
+.product-stage{background:rgba(7,27,57,.84);border-color:#91c5ee30;box-shadow:0 18px 70px #020e2425}
+.model-area,.detail-visual{background:radial-gradient(ellipse at 50% 40%,rgba(43,89,143,.65),rgba(15,43,82,.84) 55%,rgba(7,27,54,.94))}
+.model-top{color:#b2d2ec}.live-indicator:before{background:#9fffe3}
+.model-toolbar>span{color:#afc8df}
+.model-toolbar button{background:#15385edb;border-color:#88bddb60;color:#d3e8f8}
+.model-toolbar button:hover,.model-toolbar button.selected{background:#245675}
+.product-copy .eyebrow{color:#9ecee6}
+.sample-note{color:#8eabc8}
+.spec-row small{color:#96b3d2}
+.company-copy .eyebrow{color:#a4cfeb}
+.company-copy>.company-name{color:#b4ffe9}
+.company-tags{color:#9ab8d4}
+.company-photo img{filter:brightness(.65) saturate(.6)}
+.image-caption{color:#d9eafa}
+.text-link{border-color:#81c8db}
+.factory-card{background:#143454}
+.factory-card img{filter:brightness(.67) saturate(.4)}
+.factory-shade{background:linear-gradient(180deg,#071a3944,transparent 25%,#06172deb)}
+.factory-tag{border-color:#cbecff59}
+.factory-card-copy .eyebrow{color:#c8e4f7}
+.round-link{border-color:#a1e7eb}.round-link:hover{background:#a6ffe5;color:#082446}
+.factory-reference{color:#acc8db}
+.process-list>div>span{color:#91b8d7}
+.contact{background:linear-gradient(140deg,rgba(8,38,76,.86),rgba(20,81,107,.73));color:#edf7ff;border-top:1px solid #9cdce545}
+.contact-top,.contact-top .eyebrow{color:#bddce9}
+.status-dot{background:#9fffe3}
+.contact h2 em{color:#a6ffe5}
+.contact-cta>span{border-color:#9feee478}
+.contact-cta:hover>span{background:#a6ffe5;color:#082446}
+.contact-details{border-color:#a9d4f23b}
+.contact-details small{color:#a3c7dd}
+footer>span{color:#afc8de}.preview-disclaimer{color:#9fbfd5}
+.detail-copy .eyebrow{color:#a6d7ef}
+.detail-copy h3{color:#c9e4f7}
+.field-label{color:#abd7e8}
+select{color:#eef8ff;background:#102f55;border-color:#8fc7ee45}
+.detail-note{color:#a9c6dd}
+.configuration-total>span{color:#a7c7e0}
+.configuration-total small{color:#aee5e4}
+.configuration-toggle{background:#76caff08;border-color:#84c7ee40}
+.configuration-toggle input,.firmness-options input{accent-color:#9fffe3}
+.configuration-toggle small{color:#acc5dd}
+.firmness-options legend{color:#a4cde4}
+.firmness-options label{border-color:#91c8ee45}
+.firmness-options label.checked{border-color:#9fffe3;background:#9fffe313}
+.configuration-note{color:#b0cfe0}
+.layer-story-heading .eyebrow{color:#a6cce4}
+.layer-story-heading>span:last-child{color:#b8eadd}
+.layer-cards article{border-color:#91c8ee40;background:rgba(8,32,66,.66)}
+.layer-card-top>span,.layer-card-top small{color:#9cbcd7}
+.layer-cards h4>span{color:#b6f9e8;border-color:#90dcdf45}
+.layer-cards p{color:#a9c4dd}
+.layer-cards .extension-layer{border-color:#9fffe3;background:rgba(25,83,101,.55)}
+.modal-backdrop{background:#020f28c9}
+.dialog{background:#0b2649;border-color:#7eb6dc60}
+.dialog label{color:#d0e3f3}
+.dialog input,.dialog textarea{background:#071d3a;border-color:#6b9bc66b;color:#edf7ff}
+.dialog input::placeholder,.dialog textarea::placeholder{color:#90adcb}
+.dialog .inquiry-configuration{background:#9fffe312;border-color:#9fffe3}
+.notice{color:#b7ffe7}
+.webgl-fallback p{color:#a9c4dd}
+.fallback-mattress{box-shadow:0 25px #789ba9,0 45px #32516e}
+.site-intro{background:transparent}
+.intro-frame--brand{background:linear-gradient(135deg,rgba(5,22,53,.82),rgba(17,60,120,.38));color:#edf8ff}
+.intro-frame--promise{background:linear-gradient(135deg,rgba(32,102,196,.74),rgba(100,216,212,.47));color:#f0fffc}
+.intro-brand{color:#e5fff8}
+.intro-promise{color:#effffb;text-shadow:0 2px 35px #06224515}
+.intro-kicker{opacity:.85}
+.intro-rule{background:#a6ffe5;opacity:.8}
+.intro-footer{color:#e7f8ff;mix-blend-mode:normal}
+.intro-footer button{border-color:#b5e8f88c}
+.intro-footer button:hover{background:#b5e8f818}
+@media(max-width:760px){.site-header nav{background:rgba(7,28,57,.97);border-color:#91c5ee40}.wave-legibility-shade{background:linear-gradient(180deg,rgba(4,18,42,.48),rgba(5,24,54,.30) 60%,rgba(4,17,40,.5))}}
+
+/* Keep the preloaded homepage invisible until the deliberate crossfade. */
+/* A sub-pixel alpha lets the browser prepare the first home frame during the hold. */
+.site-content--covered{opacity:0.001;pointer-events:none;will-change:opacity}
+.site-content--revealing{opacity:1;transition:opacity 2600ms cubic-bezier(.45,0,.2,1)}
+@media(prefers-reduced-motion:reduce){.site-content--revealing{transition:none}}
+
+/* Keep product media below the copy and soften its mobile edges. */
+.hero-visual{z-index:1}
+.site-content h1[tabindex="-1"]:focus{outline:none}
+@media(max-width:760px){
+ .hero-visual{top:440px;height:440px}
+ .hero-video{mask-image:radial-gradient(ellipse at 50% 55%,#000 28%,transparent 66%);-webkit-mask-image:radial-gradient(ellipse at 50% 55%,#000 28%,transparent 66%)}
+}
+
+/* The cached poster covers video decoding without starting a second WebGL scene. */
+.hero-video:not(.ready){opacity:1}
+.site-content--revealing{will-change:opacity}

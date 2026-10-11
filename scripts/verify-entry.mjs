@@ -1,0 +1,15 @@
+import { chromium } from 'file:///C:/Users/Johnson/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+const browser=await chromium.launch({headless:true,channel:'msedge'});const page=await browser.newPage({viewport:{width:1440,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:5173/');
+await page.locator('[data-transitioning="true"]').waitFor();await page.waitForTimeout(550);
+await page.screenshot({path:'Y:/mweb/preview-entry-mask.png'});
+console.log('Mask:',await page.evaluate(()=>({clones:document.querySelectorAll('.pixel-swap__pixel-content').length,rects:document.querySelectorAll('clipPath rect').length,scenes:document.querySelectorAll('.mattress-scene canvas').length,clip:getComputedStyle(document.querySelectorAll('.pixel-swap__layer')[1]).clipPath})));
+await page.locator('[data-active="true"]').waitFor();await page.screenshot({path:'Y:/mweb/preview-entry-promise.png'});
+await page.locator('.site-intro').waitFor({state:'detached',timeout:15000});await page.screenshot({path:'Y:/mweb/preview-entry-home.png'});
+await page.locator('#collection').scrollIntoViewIfNeeded();await page.locator('#collection .mattress-scene canvas').waitFor({timeout:15000});console.log('Collection 3D loaded on scroll');
+await page.getByRole('button',{name:'Explore layers',exact:true}).click();console.log('Layers toggle',await page.getByRole('button',{name:'Assemble',exact:true}).getAttribute('aria-pressed'));
+await page.goto('http://127.0.0.1:5173/');await page.keyboard.press('Escape');await page.locator('.site-intro').waitFor({state:'detached'});console.log('Escape OK');
+await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:5173/');await page.getByRole('button',{name:'Skip intro'}).click();await page.locator('.site-intro').waitFor({state:'detached'});console.log('Mobile skip/no overflow:',await page.evaluate(()=>document.documentElement.scrollWidth===innerWidth));
+await page.emulateMedia({reducedMotion:'reduce'});await page.goto('http://127.0.0.1:5173/');await page.locator('.hero-scene canvas').waitFor();console.log('Reduced motion:',await page.locator('.site-intro').count());
+await page.emulateMedia({reducedMotion:'no-preference'});await page.goto('http://127.0.0.1:5173/products/modular-combo');await page.locator('.detail-visual canvas').waitFor();console.log('Product direct load:',await page.locator('.site-intro').count());
+await page.route('**/media/combo-hero-blue.webm',route=>route.abort());await page.goto('http://127.0.0.1:5173/');await page.getByRole('button',{name:'Skip intro'}).click();await page.locator('.hero-scene canvas').waitFor();console.log('Failed video falls back to 3D:',await page.locator('.hero-video').count());console.log('Errors:',errors);await browser.close();
